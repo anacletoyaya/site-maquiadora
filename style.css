@@ -250,3 +250,69 @@ blockquote cite {
   color: var(--creme);
   margin: 2rem 0 1rem;
 }
+.pacotes {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.pacote {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.5rem;
+  border: 1px solid var(--caramelo);
+  border-radius: 0.75rem;
+}
+
+.pacote h3 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--dourado);
+}
+
+.inclui {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.inclui li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.inclui li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--dourado);
+  font-weight: 700;
+}
+
+.pacote .preco {
+  font-size: 1.6rem;
+  margin-top: auto;
+}
+
+.condicao {
+  font-size: 0.95rem;
+  color: var(--caramelo);
+}
+
+.pacote .botao {
+  align-self: flex-start;
+}
+
+.aviso {
+  margin-top: 1.5rem;
+  color: var(--creme);
+  opacity: 0.8;
+}
+
+@media (min-width: 820px) {
+  .pacotes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
