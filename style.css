@@ -154,7 +154,7 @@ html {
   z-index: 10;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
   padding: 0.9rem 1.25rem;
   background: rgba(20, 16, 14, 0.92);
@@ -314,5 +314,71 @@ blockquote cite {
 @media (min-width: 820px) {
   .pacotes {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .menu {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.8rem;
+    overflow-x: auto;
+  }
+
+  .menu a {
+    padding: 0.25rem 0;
+  }
+
+  .topo {
+    padding: 3rem 1rem 2.5rem;
+  }
+  .topo p {
+    font-size: 1.05rem;
+  }
+
+  .portfolio,
+  .servicos,
+  .depoimentos,
+  .contato {
+    padding: 2rem 1rem;
+  }
+
+  .portfolio,
+  .servicos,
+  .depoimentos,
+  .contato,
+  .topo {
+    scroll-margin-top: 3.5rem;
+  }
+
+  .galeria {
+    gap: 0.5rem;
+  }
+
+  .pacote {
+    padding: 1.25rem;
+  }
+
+  .pacote .botao,
+  .acoes .botao {
+    width: 100%;
+    text-align: center;
+    align-self: stretch;
+  }
+
+  .acoes {
+    flex-direction: column;
+  }
+}
+@media (max-width: 719px) {
+  .galeria {
+    gap: 0.75rem;
+  }
+
+  .galeria img:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 0.375rem);
   }
 }
