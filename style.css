@@ -1,0 +1,252 @@
+:root {
+  --preto: #14100e;
+  --dourado: #c9a24b;
+  --caramelo: #b5763a;
+  --creme: #f5ece0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  color: var(--creme);
+  background:
+    radial-gradient(circle at 85% 0%, rgba(181, 118, 58, 0.4), transparent 55%),
+    var(--preto);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.topo {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5rem 1.25rem 4rem;
+}
+
+.topo h1 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 8vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--dourado);
+}
+
+.topo p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.botao {
+  display: inline-block;
+  background: var(--dourado);
+  color: var(--preto);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+}
+
+.botao:hover {
+  background: var(--caramelo);
+  color: white;
+}
+.topo::before {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 3px;
+  background: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+.portfolio {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+}
+
+.portfolio h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.galeria img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  background: var(--caramelo);
+}
+
+@media (min-width: 720px) {
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.servicos {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+}
+
+.servicos h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+
+.lista-servicos {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.lista-servicos li {
+  display: grid;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 1.25rem;
+  border: 1px solid var(--caramelo);
+  border-radius: 0.75rem;
+}
+
+.lista-servicos h3 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.preco {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--dourado);
+}
+
+@media (min-width: 720px) {
+  .lista-servicos li {
+    grid-template-columns: 1fr auto auto;
+    gap: 1.5rem;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 0.9rem 1.25rem;
+  background: rgba(20, 16, 14, 0.92);
+  border-bottom: 1px solid var(--caramelo);
+}
+
+.menu a {
+  color: var(--creme);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.menu a:hover {
+  color: var(--dourado);
+}
+
+.portfolio,
+.servicos,
+.topo,
+.depoimentos,
+.contato {
+  scroll-margin-top: 4rem;
+}
+.depoimentos,
+.contato {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+  scroll-margin-top: 4rem;
+}
+
+.depoimentos h2,
+.contato h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  color: var(--dourado);
+  margin-bottom: 1.5rem;
+}
+
+.lista-depoimentos {
+  display: grid;
+  gap: 1.5rem;
+}
+
+blockquote {
+  border-left: 4px solid var(--caramelo);
+  padding-left: 1rem;
+}
+
+blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+blockquote cite {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--dourado);
+}
+
+.contato p {
+  max-width: 34rem;
+  margin-bottom: 1.5rem;
+}
+
+.acoes {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.botao.contorno {
+  background: transparent;
+  color: var(--dourado);
+  border: 2px solid var(--dourado);
+}
+
+.botao.contorno:hover {
+  background: var(--dourado);
+  color: var(--preto);
+}
+
+@media (min-width: 820px) {
+  .lista-depoimentos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.grupo {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--creme);
+  margin: 2rem 0 1rem;
+}
